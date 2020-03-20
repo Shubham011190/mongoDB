@@ -4,7 +4,10 @@ mongoose.connect("mongodb://localhost:27017/fruitsDB", { useNewUrlParser: true ,
 
 //Creating schema.
 const fruitSchema = new mongoose.Schema({
-  name: String,
+  name:{
+    type: String,
+    required :[true, "Check your input. No name specified!"]
+  },
   rating:{
     type: Number,
     min: 1,
