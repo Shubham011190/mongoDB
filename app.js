@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost:27017/fruitsDB", { useNewUrlParser: true ,useUnifiedTopology: true,});
 
-//Creating schema.
 const fruitSchema = new mongoose.Schema({
   name:{
     type: String,
@@ -72,12 +71,14 @@ Fruit.find(function(err,fruits){
     console.log(err);
   }
   else {
-    // console.log(fruits);
+    console.log(fruits);
 
     //Can use connection.close before the remaining conditions.
     mongoose.connection.close();
   fruits.forEach(function(fruit){
     console.log(fruit.name);
-  })
+  });
   }
-})
+});
+
+// Fruit.updateOne({_id:})
