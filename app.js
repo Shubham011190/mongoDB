@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 mongoose.connect("mongodb://localhost:27017/fruitsDB", { useNewUrlParser: true ,useUnifiedTopology: true,});
 
+// Creating schema.
 const fruitSchema = new mongoose.Schema({
   name:{
     type: String,
