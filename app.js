@@ -50,8 +50,6 @@ fruit.save();
 //   }
 // });
 
-
-
 const personSchema = new mongoose.Schema({
   name: String,
   age: Number
@@ -65,8 +63,6 @@ const Person = mongoose.model("Person", personSchema);
 // });
 
 // person1.save();
-
-
 Fruit.find(function(err,fruits){
   if(err){
     console.log(err);
